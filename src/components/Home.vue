@@ -11,7 +11,7 @@
                   <DataBindingStorage/>
               </b-tab>
               <b-tab title="Vuex" :title-link-class="linkClass(2)">
-                  
+                  <DataBindingVuex/>
               </b-tab>
           </b-tabs>
       </b-card>
@@ -22,11 +22,12 @@
 <script>
   import DataBindingGlobal from '@/components/data-binding-global/DataBindingGlobal'
   import DataBindingStorage from '@/components/data-binding-storage/DataBindingStorage'
+  import DataBindingVuex from '@/components/data-binding-vuex/DataBindingVuex'
 
   export default {
     name: 'Home',
     components: {
-        DataBindingGlobal, DataBindingStorage
+        DataBindingGlobal, DataBindingStorage, DataBindingVuex
     },
     data() {
       return {
