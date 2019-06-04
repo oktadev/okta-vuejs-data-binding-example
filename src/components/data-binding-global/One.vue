@@ -1,7 +1,7 @@
 <template>
     <div>
         <p class="card-text">
-            <b-progress :max="scoreState.max" height="1.75rem" style="font-size: 1.15rem;" show-progress>
+            <b-progress :max="scoreState.max" class="big-progress" show-progress>
                 <b-progress-bar :value="scoreState.score"/>
             </b-progress>
             <br/>
@@ -21,7 +21,7 @@
         name: 'One',
         data() {
             return {
-                scoreState: globalData.state,
+                scoreState: globalData.state
             }
         },
         methods: {

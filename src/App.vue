@@ -24,4 +24,8 @@ export default {
   color: #2c3e50;
   margin-top: 60px;
 }
+.big-progress {
+    height: 1.75rem !important;
+    font-size: 1.15rem !important;
+}
 </style>
