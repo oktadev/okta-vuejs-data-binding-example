@@ -1,6 +1,9 @@
 # vue-data-binding-approaches
 
 ## Project setup
+
+For both the `basic` and `vuex-advanced` folders:
+
 ```
 npm install
 ```
