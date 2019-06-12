@@ -37,6 +37,22 @@
         }
       }
     },
+    created() {
+      authClient = new OktaAuth({
+        issuer: ISSUER,
+        clientId: CLIENT_ID,
+        redirectUri: REDIRECT_URI
+      });
+    },
+    async mounted() {
+      // check for tokens from redirect
+      if (location.hash) {
+        var tokenInfo = await authClient.token.parseFromUrl();
+
+        this.$store.commit('setUser', {key: 'claims', value: tokenInfo.claims});
+        this.$store.commit('setIdToken', tokenInfo.idToken);
+      }
+    },
     methods: {
       login() {
         authClient.token.getWithRedirect({
@@ -52,22 +68,6 @@
       ...mapState(['user']),
       userStr() {
         return JSON.stringify(this.$store.state.user, null, '\t')
-      }
-    },
-    created() {
-      authClient = new OktaAuth({
-        issuer: ISSUER,
-        clientId: CLIENT_ID,
-        redirectUri: REDIRECT_URI
-      });
-    },
-    async mounted() {
-      // check for tokens from redirect
-      if (location.hash) {
-        var tokenInfo = await authClient.token.parseFromUrl();
-
-        this.$store.commit('setUser', {key: 'claims', value: tokenInfo.claims});
-        this.$store.commit('setIdToken', tokenInfo.idToken);
       }
     }
   }
