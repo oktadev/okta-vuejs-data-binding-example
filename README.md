@@ -2,7 +2,9 @@
 
 ## Project setup
 
-For both the `basic` and `vuex-advanced` folders:
+Each folder in the project is a standalone Vue.js app.
+
+For each of the `basic`, `vuex-advanced`, and `vuex-okta` folders:
 
 ```
 npm install
