@@ -1,0 +1,11 @@
+sequenceDiagram
+    participant RO as User
+    participant CA as Vue.js SPA
+    participant AS as Okta
+    RO->>CA: 1. Click: Login
+    CA->>RO: 2. Redirect
+    RO->>AS: 3. Redirect to Login
+    AS->>RO: 4. Return Login Form
+    RO->>AS: 5. Submit Credentials
+    AS->>RO: 6. Redirect with Token
+    RO->>CA: 7. Redirect to with ID Token
