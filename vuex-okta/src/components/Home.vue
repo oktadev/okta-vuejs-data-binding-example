@@ -17,7 +17,7 @@
   import OktaAuth from '@okta/okta-auth-js';
   import { mapState } from 'vuex';
 
-  const ISSUER = 'https://{yourOktaDomain}/oauth2/ausneyiq5fyDfRMvZ356';
+  const ISSUER = 'https://{yourOktaDomain}/oauth2/default';
   const CLIENT_ID = '{yourClientId}';
   const REDIRECT_URI = 'http://localhost:8080';
   var authClient;

@@ -21,7 +21,7 @@
         name: 'Two',
         data() {
             return {
-                scoreState: globalData.state,
+                scoreState: globalData.state
             }
         },
         methods: {
